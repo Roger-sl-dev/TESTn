@@ -24,7 +24,7 @@ export default()=>{
               Image={item.image} 
               Preço={item.price} 
               Titulo={item.title} 
-              Descrição={item.description} 
+              Texto={item.description} 
             />
       
         ))}

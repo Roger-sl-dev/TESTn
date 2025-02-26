@@ -56,18 +56,20 @@ export default () => {
   const handleCheckout = async () => {
     try {
       const checkoutData = {
-        amount: parseFloat(Total()) * 100,
+        product:{
+          amount: parseFloat(Total()) * 100,
+          title:'O Pedação - Pedaço de Pizza Enorme',
+          price:parseFloat(Total()) * 100,
+          quantity:1
+
+        },
         customer: {
           name: Nome,
-          phone: ""
+          phone: Whatsapp,
+          email:'maria.oliveira@email.com'
         },
-        return_url: "",
-        cancel_url: "",
-        address: {
-          logradouro: addressData.logradouro,
-          numero: addressData.numero
-        },
-        payment_method: paymentMethod
+       
+     
       };
 
       const response = await axios.post(Api, checkoutData);
@@ -140,24 +142,28 @@ export default () => {
             <input
               type="text"
               value={Nome}
+              required
               placeholder="Nome"
-              className="w-full mb-2 p-2 text-lg "
+              className="w-full mb-2 p-2 text-lg border-2 border-black rounded-lg "
               onChange={(e) => setNome(e.target.value)}
             />
               <input
-               data-mask="(00)00000-0000"
+               data-mask="(00) 00000-0000"
               type="text"
               value={Whatsapp}
+              required
               placeholder="Whatsapp"
-              className="w-full p-2 text-lg mb-2.5"
+              className="w-full p-2 text-lg mb-2.5 border-2 border-black rounded-lg"
               onChange={(e) => setWhatsapp(e.target.value)}
             />
             
             <span className="flex flex-row gap-1">
               <input
-                className="w-[75%] p-2"
+                className="w-[75%] p-2 border-2 rounded-lg border-black"
                 type="text"
                 value={addressData.logradouro}
+
+                required
                 placeholder="Endereço"
                 onChange={(e) =>
                   setAddressData({ ...addressData, logradouro: e.target.value })
@@ -165,21 +171,21 @@ export default () => {
               />
               <input
                 type="text"
-                className="w-[25%] p-2 "
+                className="w-[25%] p-2 border-2 border-black rounded-lg "
                 value={addressData.numero}
                 placeholder="Número"
+                required
                 onChange={(e) =>
                   setAddressData({ ...addressData, numero: e.target.value })
                 }
               />
             </span>
           </span>
-          <select
+          <select className=" text-xl border border-black rounded-lg p-1.5"
             value={paymentMethod}
             onChange={(e) => setPaymentMethod(e.target.value)}
           >
-            <option value="pix">Pix</option>
-            <option value="cartao">Cartão</option>
+            <option className=" text-xl" value="pix">Pix</option>
           </select>
           <button className="bg-blue-500 text-xl p-2 text-white font-semibold  rounded-lg" onClick={handleCheckout}>
             Finalizar
