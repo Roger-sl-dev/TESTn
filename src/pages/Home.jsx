@@ -83,7 +83,7 @@ export default() => {
 
       {/* Footer Section */}
       <section className="py-10 bg-blue-500">
-        <p className="text-xl text-white">O Pedação - Pedaço de Pizza Enorme 2025. Todos os direitos reservados</p>
+        <p className="text-xl text-center text-white">O Pedação - Pedaço de Pizza Enorme 2025. Todos os direitos reservados</p>
       </section>
     </div>
     </HomeLayout>
