@@ -87,7 +87,7 @@ export default () => {
 
   return (
     <>
-      <section className=" bg-[#f4f5f7] h-screen w-screen">
+      <section className=" bg-[#f4f5f7] mb-20 h-screen w-screen">
         <div className="flex flex-row border-b-[1px]  border-gray-200 justify-between py-3 px-4 bg-white">
           <p className=" text-lg text-gray font-medium">O Pedação - Pedaço de Pizza Enorme</p>
           <Link to={'/'}>
