@@ -19,7 +19,7 @@ export default() => {
     <HomeLayout>
 
     
-    <div className=' bg-[#f4f5f7] mb-16'>
+    <div className=' bg-[#f4f5f7] mb-20'>
       <section className="flex flex-col">
         <div className="w-screen bg-cover min-h-40 h-40 bg-[url('../src/assets/Banner.jpeg')]"></div>
         <div className="grid w-full place-items-center bg-white rounded-b-2xl py-5">
