@@ -11,9 +11,9 @@ export default()=>{
     return(
         <section className=" w-screen h-screen bg-gray-200  ">
             <div className=" flex flex-row bg-white p-2 justify-between mb-5 place-items-center">
-                <h3 className=" text-2xl capitalize font-semibold">promoções</h3>
-                <Link to={'/'}>
-                <IoIosClose className=" text-5xl"/>
+                <h3 className=" text-xl capitalize font-semibold">promoções</h3>
+                <Link className="" to={'/'}>
+                <IoIosClose className=" bg-gray-300 rounded-full text-4xl"/>
                 </Link>
             </div>
 

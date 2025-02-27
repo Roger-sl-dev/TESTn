@@ -11,21 +11,21 @@ export default (props)=>{
     
     return(
 
-        <div className=" bg-white w-full p-2.5 ">
+        <div className=" bg-white w-full p-2.5 rounded-lg">
             <div className=" flex justify-between flex-row ">
                 <span className=" flex flex-row  gap-1">
                   <p >{props.Numero}x</p>
-                  <p>{props.Titulo}</p>
+                  <p className="text-sm">{props.Titulo}</p>
                 </span>
-                <p>R$ {props.Preço}</p>
+                <p className=" ">R$ {props.Preço}</p>
             </div>
-            <div className=" flex flex-row justify-between ">
-                <span className=" flex flex-row gap-2 text-lg">
+            <div className=" grid  grid-flow-col place-self-stretch justify-between ">
+                <span className="  grid  grid-cols-2 align-bottom gap-5 text-msm place-content-end">
                     <button onClick={handleClick} className=" text-blue-500 font-semibold">Editar</button>
-                    <button onClick={props.Remover} className=" text-gray-500">Remover</button>
+                    <button onClick={props.Remover} className=" text-gray-400">Remover</button>
 
                 </span>
-                <img className=" size-16 mt-2.5" src={props.Image} alt="" />
+                <img className=" size-12 rounded-lg mt-2.5" src={props.Image} alt="" />
             </div>
         </div>
     )

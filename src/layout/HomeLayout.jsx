@@ -19,11 +19,11 @@ export default ({ children }) => {
             <Link to={'sacola'}>
             <div
               id="sacola"
-              className="flex flex-row bg-blue-500 text-white justify-between px-3 py-5"
+              className="flex flex-row bg-blue-500 text-white justify-between px-3 py-4 h-14"
               >
-              <GiShoppingBag className="text-3xl" />
-              <button className="text-2xl font-bold">Ver Sacola</button>
-              <p className="text-xl font-semibold">R$ {Total()}</p>
+              <GiShoppingBag className="text-2xl" />
+              <button className="text-lg font-bold">Ver Sacola</button>
+              <p className="text-md font-semibold">R$ {Total()}</p>
             </div>
                 </Link>
           )}

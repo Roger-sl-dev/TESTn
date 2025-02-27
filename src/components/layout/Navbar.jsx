@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 export default ()=>{
     return(
         <>
-         <div className=" grid grid-cols-4 bg-white w-full py-2.5  border-t shadow-xl">
+         <div className=" grid grid-cols-4 bg-white w-full py-1.5  border-t shadow-xl">
           
           <Link to='/'>
            <MenuItem Iocns={<IoHome/>} Texto='Home'/>
@@ -33,10 +33,10 @@ let MenuItem=({Iocns,Texto})=>{
     return(
 
         <span className="  text-center flex flex-col place-items-center">
-            <span className=" text-3xl text-gray-600 text-center">
+            <span className=" text-2xl text-gray-400 text-center">
               {Iocns}
             </span>
-       <p className=" trx">{Texto}</p>
+       <p className=" text-gray-400 ">{Texto}</p>
    </span>
 
     )

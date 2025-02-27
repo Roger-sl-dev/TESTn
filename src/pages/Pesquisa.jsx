@@ -4,7 +4,7 @@ import { Categories } from "../data/Produtos";
 import FoodItem from "../components/ui/FoodItem";
 import { FaSearch } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
-
+import { Link } from "react-router-dom";
 
 const SearchFilter = () => {
   const [query, setQuery] = useState("");
@@ -24,7 +24,11 @@ const SearchFilter = () => {
   return (
     <div className="  bg-gray-200 h-screen w-screen ">
       <div className=" flex flex-row gap-3 w-full bg-white py-2 px-2 mb-5 place-items-center justify-between">
+        
         <FaSearch/>
+      
+      
+
          
       <input
         type="text"
@@ -33,7 +37,9 @@ const SearchFilter = () => {
         onChange={(e) => setQuery(e.target.value)}
         className="p-2  focus:outline-none rounded w-4/5"
         />
+        <Link to={'/'}>
         <IoIosClose className=" text-5xl"/>
+        </Link>
         </div>
       <div className=" flex flex-col gap-5 px-2.5">
         {result.length > 0 ? (
@@ -46,7 +52,7 @@ const SearchFilter = () => {
      
           ))
         ) : (
-          <p>Nenhum resultado encontrado.</p>
+          <p></p>
         )}
       </div>
     </div>

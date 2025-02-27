@@ -207,9 +207,9 @@ export default function Produto() {
       <img className="w-full min-h-60 object-cover bg-blue-500" src={product.image} alt={''} loading="lazy" />
 
       <div className="bg-white px-2 py-5 flex flex-col gap-5">
-        <h2 className="text-2xl font-semibold">{product.title}</h2>
-        <p className="text-lg font-medium">{product.description}</p>
-        <p className="text-xl font-semibold">R$ {product.price.toFixed(2)}</p>
+        <h2 className="text-xl font-semibold">{product.title}</h2>
+        <p className="text-sm font-light ">{product.description}</p>
+        <p className="text-base font-medium">R$ {product.price.toFixed(2)}</p>
       </div>
       <div>
          <div className="  overscroll-contain">
@@ -221,20 +221,20 @@ export default function Produto() {
 
       <div className="bg-white px-2.5 flex flex-col gap-5 pb-20">
         <span className="flex flex-row justify-between">
-          <p className="text-lg text-black">Alguma observação?</p>
-          <p className="text-black">0/140</p>
+          <p className="text-lg font-light text-gray-500">Alguma observação?</p>
+          <p className=" text-gray-500">0/140</p>
         </span>
-        <textarea className="w-full border rounded-xl min-h-28"></textarea>
+        <textarea className="w-full border border-gray-400 rounded-lg min-h-28"></textarea>
       </div>
 
       <div className="flex fixed bottom-0 w-full flex-row gap-2 px-2 justify-between py-2 border-t bg-white">
-        <span className="grid grid-flow-col w-2/6 bg-gray-200 text-2xl place-items-center place-self-center">
+        <span className="grid grid-flow-col w-2/6 bg-gray-200 text-lg place-items-center place-self-center">
           <button onClick={diminuirQuantidade}>-</button>
           <p>{quantidade}</p>
           <button onClick={aumentarQuantidade}>+</button>
         </span>
         <button className="w-4/6 bg-blue-500 py-2.5 rounded-lg text-white flex flex-row justify-between px-2" onClick={handleAddToCart}>
-          <p className="text-xl font-semibold">Adicionar</p>
+          <p className="text-base font-semibold">Adicionar</p>
           <span>R$ {precoTotal.toFixed(2)}</span>
         </button>
       </div>

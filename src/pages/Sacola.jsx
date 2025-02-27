@@ -87,9 +87,9 @@ export default () => {
 
   return (
     <>
-      <section className="bg-gray-200 h-screen w-screen">
-        <div className="flex flex-row border-b justify-between py-2 px-4 bg-white">
-          <p className=" text-xl text-black font-bold ">O Pedação - Pedaço de Pizza Enorme</p>
+      <section className=" bg-[#f4f5f7] h-screen w-screen">
+        <div className="flex flex-row border-b-[1px]  border-gray-200 justify-between py-3 px-4 bg-white">
+          <p className=" text-lg text-gray font-medium">O Pedação - Pedaço de Pizza Enorme</p>
           <Link to={'/'}>
             <IoClose className=" text-2xl" />
           </Link>
@@ -97,7 +97,7 @@ export default () => {
       <TaxaDeEntrega/>
 
         <div className="w-full px-2 mt-5 flex flex-col gap-5">
-          <span className="flex flex-row justify-between px-4 text-lg text-black font-medium">
+          <span className="flex flex-row justify-between  text-sm text-black font-medium">
             <p>Sua sacola</p>
             <p>Limpar</p>
           </span>
@@ -119,14 +119,14 @@ export default () => {
             </div>
           )}
           <span className="grid place-content-center w-full">
-            <Link to={'/'} className="text-center text-xl font-bold text-blue-500">
+            <Link to={'/'} className="text-center text-sm font-bold text-blue-500">
               ADICIONAR MAIS ITENS
             </Link>
           </span>
         </div>
 
-        <div className="p-5 flex flex-col gap-3 fixed bottom-1 w-full bg-white">
-          <span className="flex text-lg text-black flex-row justify-between w-full bg-white">
+        <div className="p-5 flex flex-col gap-3 fixed bottom-0 w-full bg-white">
+          <span className="flex text-sm text-black flex-row justify-between w-full bg-white">
             <span>
         
               <p>Taxa de entrega</p>
@@ -144,7 +144,7 @@ export default () => {
               value={Nome}
               required
               placeholder="Nome"
-              className="w-full mb-2 p-2 text-lg border-2 border-black rounded-lg "
+              className="w-full mb-2 px-2 py-1 text-lg border-2 border-black rounded-lg "
               onChange={(e) => setNome(e.target.value)}
             />
               <input
@@ -153,13 +153,13 @@ export default () => {
               value={Whatsapp}
               required
               placeholder="Whatsapp"
-              className="w-full p-2 text-lg mb-2.5 border-2 border-black rounded-lg"
+              className="w-full px-2 py-1 text-lg mb-2.5 border-2 border-black rounded-lg"
               onChange={(e) => setWhatsapp(e.target.value)}
             />
             
             <span className="flex flex-row gap-1">
               <input
-                className="w-[75%] p-2 border-2 rounded-lg border-black"
+                className="w-[75%] px-2 py-1 border-2 rounded-lg border-black"
                 type="text"
                 value={addressData.logradouro}
 
@@ -171,7 +171,7 @@ export default () => {
               />
               <input
                 type="text"
-                className="w-[25%] p-2 border-2 border-black rounded-lg "
+                className="w-[25%] p-1 border-2 border-black rounded-lg "
                 value={addressData.numero}
                 placeholder="Número"
                 required
@@ -181,7 +181,7 @@ export default () => {
               />
             </span>
           </span>
-          <select className=" text-xl border border-black rounded-lg p-1.5"
+          <select className=" text-lg border border-black rounded-lg p-2"
             value={paymentMethod}
             onChange={(e) => setPaymentMethod(e.target.value)}
           >
