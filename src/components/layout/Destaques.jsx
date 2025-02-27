@@ -9,7 +9,7 @@ import 'swiper/css';
   return (
     <div className="w-full">
       <Swiper
-        spaceBetween={5}
+        spaceBetween={3}
         slidesPerView={2}
         pagination={{ clickable: true }}
         breakpoints={{
