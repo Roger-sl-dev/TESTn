@@ -8,7 +8,7 @@ export default({ Image, Titulo, Descrição, Preço,id }) => {
     navigate(`/produto/${id}`);
   };
   return (
-    <div onClick={hClick} className="flex flex-col h-88 justify-between gap-2 p-2 bg-white rounded-xl ">
+    <div onClick={hClick} className="flex flex-col h-[330px] justify-between gap-2 p-2 bg-white rounded-xl ">
       <img className="h-36 rounded-xl" src={Image} alt={Titulo} />
       <h3 className="text-lg font-semibold text-gray-700 line-clamp-2">{Titulo}</h3>
       <p className="text-md font-light text-gray-500 line-clamp-2">{Descrição}</p>
